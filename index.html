@@ -9,6 +9,8 @@
   <body class="mixpanel-platform-body">
     <div id="report_body">
       <div id="datePicker"></div>
+      <div id="event1"></div>
+      <div id="event2"></div>
       <div id="graph"></div>
     </div>
     <style>
@@ -39,8 +41,13 @@
         'segment3': 40
       };
       $(document).ready(function() {
-          var barChart = $('#graph').appendTo('body').MPChart({chartType: 'bar'});    // Create a bar chart
-          barChart.MPChart('setData', data);                                               // Set the chart's data
+          var barChart = $('#graph').appendTo('body').MPChart({chartType: 'bar'});    
+          // barChart.MPChart('setData', data);                                              
+      });
+      
+      var eventSelect = $('<div></div>').appendTo('body').MPEventSelect();
+      eventSelect.on('change', function(e, selection) {                    
+          alert(selection);
       });
     
       $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
