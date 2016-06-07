@@ -42,10 +42,15 @@
       };
       $(document).ready(function() {
           var barChart = $('#graph').appendTo('body').MPChart({chartType: 'bar'});    
-          // barChart.MPChart('setData', data);                                              
+          barChart.MPChart('setData', data);                                              
       });
       
-      var eventSelect = $('<div></div>').appendTo('body').MPEventSelect();
+      var eventSelect = $('event1').appendTo('body').MPEventSelect();
+      eventSelect.on('change', function(e, selection) {                    
+          alert(selection);
+      });
+      
+      var eventSelect = $('event2').appendTo('body').MPEventSelect();
       eventSelect.on('change', function(e, selection) {                    
           alert(selection);
       });
