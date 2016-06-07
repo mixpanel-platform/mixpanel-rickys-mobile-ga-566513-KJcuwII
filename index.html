@@ -7,6 +7,13 @@
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
   </head>
   <body class="mixpanel-platform-body">
+    <style>
+      #datePicker {
+        position:absolute;
+        left:50px;
+        top:100px;
+      }
+    </style>
     <div id="datePicker"></div>
     <script>
       $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
@@ -19,12 +26,5 @@
       console.log(to_date)
       // Run queries and display results here
     </script>
-    <style>
-      .datePicker {
-        position:absolute;
-        left:50px;
-        top:100px;
-      }
-    </style>
   </body>
 </html>
