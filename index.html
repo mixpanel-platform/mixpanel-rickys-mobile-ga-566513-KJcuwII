@@ -12,6 +12,8 @@
     <script>
       $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
       console.log(dateRange.from);
+      from_date = dateRange.from;
+      to_date = dateRange.to
       console.log(dateRange.to);
       });
       // Run queries and display results here
