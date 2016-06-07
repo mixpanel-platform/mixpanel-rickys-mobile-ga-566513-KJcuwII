@@ -7,13 +7,10 @@
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
   </head>
   <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
     <div id="datePicker"></div>
     <script>
       $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
       console.log(dateRange.from);
-      from_date = dateRange.from;
-      to_date = dateRange.to
       console.log(dateRange.to);
       });
       // Run queries and display results here
