@@ -8,7 +8,12 @@
   </head>
   <body class="mixpanel-platform-body">
     <h1>Hello, World!</h1>
+    <div id="datepicker"></div>
     <script>
+      $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
+      console.log(dateRange.from);
+      console.log(dateRange.to);
+      });
       // Run queries and display results here
     </script>
   </body>
