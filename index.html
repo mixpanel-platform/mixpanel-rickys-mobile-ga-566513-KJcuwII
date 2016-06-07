@@ -15,7 +15,7 @@
       });
       var datepicker = $('#datePicker').MPDatepicker();
       var dates = datepicker.val();
-      var to_date = dates.to.toISOString();
+      var to_date = dates.to.toISOString().substring(0,10);
       console.log(to_date)
       // Run queries and display results here
     </script>
