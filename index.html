@@ -9,6 +9,7 @@
   <body class="mixpanel-platform-body">
     <div id="report_body">
       <div id="datePicker"></div>
+      <div id="graph"></div>
     </div>
     <style>
       #datePicker {
@@ -27,6 +28,17 @@
       }
     </style>
     <script>
+    
+      var data = {
+        'segment1': 10,
+        'segment2': 20,
+        'segment3': 40
+      };
+      $(document).ready(function() {
+          var barChart = $('#graph').appendTo('body').MPChart({chartType: 'bar'});    // Create a bar chart
+          barChart.MPChart('setData', data);                                               // Set the chart's data
+      });
+    
       $('#datePicker').MPDatepicker().on('change', function(event, dateRange) {
       console.log(dateRange.from);
       console.log(dateRange.to);
